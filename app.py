@@ -23,7 +23,13 @@ us_gross = []
 
 movie_div = soup.find_all('div', class_='lister-item mode-advanced')
 
-movie_div
+for container in movie_div:
+  name = container.h3.a.text
+  titles.append(name)
+
+for title in titles:
+  print title
+
 
 
 
