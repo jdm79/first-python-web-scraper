@@ -11,5 +11,19 @@ results = requests.get(url, headers=headers)
 
 soup = BeautifulSoup(results.text, "html.parser")
 
-print(soup.prettify())
+# print(soup.prettify())
+
+titles = []
+years = []
+time = []
+imdb_ratings = []
+metascores = []
+votes = []
+us_gross = []
+
+movie_div = soup.find_all('div', class_='lister-item mode-advanced')
+
+movie_div
+
+
 
